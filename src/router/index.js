@@ -11,6 +11,7 @@ import Blog from '../views/Blog.vue'
 import Contact from '../views/Contact'
 import NotFound from '../views/NotFound'
 import PostDetails from '../views/PostDetails'
+import TodoVueX from "../views/TodoVueX"
 
 // indinque a Vuejs qu'il peux utiliser le router partout 
 Vue.use(VueRouter);
@@ -21,6 +22,7 @@ const routes = [
     {path: '/about/:titre/:titre2', name: "About", component: About},
     {path: '/posts/:id', name: "PostDetails", component: PostDetails},
     {path: '/contact', name: 'Contact', component: Contact},
+    {path: '/todo', name: 'TodoVueX', component: TodoVueX},
     {path: '*', name: 'NotFound', component: NotFound}
 ]
 

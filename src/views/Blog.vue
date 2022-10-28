@@ -117,7 +117,7 @@ mod
           <!-- Tout les articles -->
           <p v-show="filteredPosts.length > 0" class="text-lg font-semibold text-center my-2">Résultats : <span class="text-indigo-500">{{filteredPosts.length}}</span></p>
           <div class=' my-20 gap-7 sm:grid md:grid-cols-2 xl:grid-cols-4' v-if="filteredPosts.length > 0">
-              <Post v-for="post in filteredPosts" :key="post.id" :post="post" />
+              <Post v-for="post in filteredPosts" :key="post.id" :post="post" :delete-post="deletePost" />
           </div>
 
           <h3 v-else class="text-center text-indigo-700 text-2xl my-10">Pas de résultat</h3>
@@ -166,6 +166,9 @@ export default {
       },
       toggleSuccess() {
           this.success = !this.success
+      },
+      deletePost(post) {
+        console.log(post)
       },
       handleSubmit() {
           this.loading = true

@@ -18,6 +18,7 @@
       class="text-sm tracking-tight font-light text-slate-600 leading-6">
      {{ post.content | truncate(150) }}
      </p>
+     <button @click="deletePost">X</button>
     </div>
   </div>
 </template>
@@ -29,6 +30,9 @@ export default {
     methods: {
         goToPost(id) {
             this.$router.push(`/posts/${id}`)
+        },
+        deletePost() {
+            this.$emit("delete-post")
 
         }
     },
