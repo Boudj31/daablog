@@ -77,7 +77,7 @@ export default {
   },
   computed: {
     the4latestPosts() {
-        return posts.slice(0, 4)
+        return posts.sort((a, b) => b.id - a.id).slice(0, 4)
     },
     /*
     theDesignPost() {

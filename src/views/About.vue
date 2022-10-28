@@ -13,7 +13,7 @@ export default {
         param() {
             // avec desctructuration d'un ob
             const {titre1} = this.$route.params
-            return titre1.toUpperCase()
+            return titre1
         },
         param2() {
             // sans desctructuration d'un ob
